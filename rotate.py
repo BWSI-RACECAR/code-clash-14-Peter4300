@@ -31,11 +31,11 @@ class Solution:
         
         # TODO: Write code below to return a nested list with the solution to the prompt
         new = []
-        for row, r in enumerate(matrix):
-            for col, c in enumerate(r):
-                if row == col:
-                    new[r][c] == matrix[len(row)-r][c]  
-                    
+        columns=len(matrix[0])
+        rows=len(matrix)
+        for i in range(1,columns):
+            for j in range(rows):
+                new.append(matrix[j][i])
         return new
 
 def main():
