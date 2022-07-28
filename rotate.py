@@ -33,8 +33,8 @@ class Solution:
         new = []
         columns=len(matrix[0])
         rows=len(matrix)
-        for i in range(1,columns):
-            for j in range(rows):
+        for i in range(columns):
+            for j in reversed(range(rows)):
                 new.append(matrix[j][i])
         return new
 
