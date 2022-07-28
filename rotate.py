@@ -31,10 +31,10 @@ class Solution:
         
         # TODO: Write code below to return a nested list with the solution to the prompt
         new = []
-        for row in range(len(matrix), -1):
-            for col in range(len(matrix[row])):
+        for row, r in enumerate(matrix):
+            for col, c in enumerate(r):
                 if row == col:
-                    new.append(matrix[row][col])
+                    new[r][c] == matrix[len(row)-r][c]  
                     
         return new
 
